@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Maze Generator Core Example</title>
+    <meta name="description" content="Maze Generator Core Example">
+    <!-- either cdn should work -->
+    <!--
+    <script src="https://cdn.rawgit.com/mitchallen/maze-generator-core/v0.1.1/dist/maze-generator-core.min.js"></script>
+    -->
+    <script src="https://unpkg.com/@mitchallen/maze-generator-core@0.1.1/dist/maze-generator-core.min.js"></script>
+    <script src="https://unpkg.com/@mitchallen/connection-grid-square@0.1.0/dist/connection-grid-square.min.js"></script>
+    <script>
+      var cgFactory = window.MitchAllen.ConnectionGridSquare;
+      console.log(cgFactory);
+      var xSize = 10, ySize = 5;
+      var cGrid = cgFactory.create( { x: xSize, y: ySize } );
+      var factory = window.MitchAllen.MazeGeneratorCore;
+      var sm = factory.create({
+        grid: cGrid,
+      });
+      console.log(sm);
+      sm.generate();
+      sm.log(); 
+    </script>
+  </head>
+  <body>
+    <h1>Maze Generator Core Example</h1>
+    <p>See JavaScript developer console for output.</p>
+  </body>
+</html>
