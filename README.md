@@ -113,6 +113,10 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Version History
 
+#### Version 0.1.4
+
+* refactored generate method
+
 #### Version 0.1.3
 
 * updated browser example

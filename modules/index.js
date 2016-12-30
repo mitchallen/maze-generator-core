@@ -49,24 +49,23 @@ module.exports.create = (spec) => {
             }
         },
         generate: function(spec) {
-            let aMask = null,
-                start = null;
-            if(spec) {
-                aMask = spec.mask;
-                start = spec.start;
-            }
+
+            spec = spec || {};
+
+            let aMask = spec.mask || [],
+                start = spec.start || {},
+                x = start.c || 0,
+                y = start.r || 0;
+
             this.fill(0);
+
             for( var key in aMask ) {
                 var mask = aMask[key];
                 this.mask(mask.c,mask.r);
             }
-            let maxDepth = this.xSize * this.ySize,
-                x = 0,
-                y = 0;
-            if(start) {
-                x = start.c || 0;
-                y = start.r || 0;
-            }
+
+            let maxDepth = this.xSize * this.ySize;
+
             this.carveMaze(x,y,0,maxDepth);
         }
     });
