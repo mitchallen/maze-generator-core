@@ -85,18 +85,16 @@ module.exports.create = function (spec) {
         },
 
         /**
-          * Open borders after maze generation.
-          * This method is automatically called by [generate]{@link module:maze-generator-core#generate} after the maze has been generated.
+          * Method called after [generate]{@link module:maze-generator-core#generate} generates a maze.
           * <b>This should be overriden by base class</b>.
-          * @param {Object} options Named parameters for method
-          * @param {Array} options.spec Array of info on how to open each border
+          * The spec parameter will be passed on to this method after the maze has been generated.
+          * The derived method should parse spec for needed values.
+          * @param {Object} spec Named parameters for method
           * @function
           * @instance
           * @memberof module:maze-generator-core
           * @example <caption>possible usage</caption>
-          * // The spec parameter will be passed to the openBorders 
-          * // method after the maze has been generated.
-          * // The derived openBorders method should parse spec.open
+          * // A derived object would have an afterGenerate method that parses spec.open
           * let spec = {
           *    open: [
           *      { border: "N", list: [ 0, 2 ] },
@@ -105,7 +103,7 @@ module.exports.create = function (spec) {
           * };
           * mazeGenerator.generate(spec);
           */
-        openBorders: function openBorders(spec) {
+        afterGenerate: function afterGenerate(spec) {
             // derived class should override
         },
 
@@ -160,9 +158,9 @@ module.exports.create = function (spec) {
 
             this.carveMaze(x, y, 0, maxDepth);
 
-            // open borders after carving
+            // derived class can parse extra spec parameters
 
-            this.openBorders(spec);
+            this.afterGenerate(spec);
         }
     });
 };
