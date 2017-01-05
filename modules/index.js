@@ -51,7 +51,7 @@ module.exports.create = (spec) => {
 
     return Object.assign( _grid, {
 
-        // maybe made private, leave undocumented for now
+        // leave undocumented for now
         carveMaze: function(x,y,depth,maxDepth) {
 
             if( depth >= maxDepth ) {
@@ -82,44 +82,30 @@ module.exports.create = (spec) => {
             }
         },
 
-        /**/
-        // may be made private, leave undocumented for now
+        /**
+          * Open borders after maze generation.
+          * This method is automatically called by [generate]{@link module:maze-generator-core#generate} after the maze has been generated.
+          * <b>This should be overriden by base class</b>.
+          * @param {Object} options Named parameters for method
+          * @param {Array} options.spec Array of info on how to open each border
+          * @function
+          * @instance
+          * @memberof module:maze-generator-core
+          * @example <caption>possible usage</caption>
+          * // The spec parameter will be passed to the openBorders 
+          * // method after the maze has been generated.
+          * // The derived openBorders method should parse spec.open
+          * let spec = {
+          *    open: [
+          *      { border: "N", list: [ 0, 2 ] },
+          *      { border: "S", list: [ 3 ] }
+          *    ]
+          * };
+          * mazeGenerator.generate(spec);
+          */
         openBorders: function(spec) {
-
-            spec = spec || {};
-            var aOpen = spec.open || [];
-
-            if( aOpen.length === 0 ) {
-                return;
-            }
-
-            var borders = ["N","E","W","S"];
-
-            for( var oKey in aOpen ) {
-                var open = aOpen[oKey];
-                if(borders.contains(open.border)) {
-
-                    var list = open.list;
-
-                    if(!list) {
-                        console.error("ERROR: open border requires list parameter.")
-                        continue;
-                    }
-
-                    for( var key in list ) {
-                        var id = parseInt(list[key],10);
-                        if( open.border === "N" ) {
-                            
-                        }
-                    }
-
-                } else {
-                    console.error("ERROR: open.border ('%s') not found", open.border );
-                }
-            }
-
+            // derived class should override
         },
-        /**/
 
         /** Generators a maze
           * @param {Object} options Named parameters for generating a maze
@@ -151,14 +137,6 @@ module.exports.create = (spec) => {
           *    ]
           * };
           * mazeGenerator.generate(spec);
-          * @example <caption>open</caption>
-          * let spec = {
-          *    open: [
-          *      { border: "N", list: [ 0, 2 ] },
-          *      { border: "S", list: [ 3 ] }
-          *    ]
-          * };
-          * mazeGenerator.generate(spec);
           */
         generate: function(spec) {
 
@@ -180,7 +158,7 @@ module.exports.create = (spec) => {
 
             this.carveMaze(x,y,0,maxDepth);
 
-            // open after carving
+            // open borders after carving
 
             this.openBorders(spec);
 
