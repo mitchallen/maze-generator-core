@@ -72,10 +72,10 @@ You must use __npm__ __2.7.0__ or higher because of the scoped package name.
         <meta name="description" content="Maze Generator Core Example">
         <!-- either cdn should work -->
         <!--
-        <script src="https://cdn.rawgit.com/mitchallen/maze-generator-core/v0.1.3/dist/maze-generator-core.min.js"></script>
+        <script src="https://cdn.rawgit.com/mitchallen/maze-generator-core/v0.1.7/dist/maze-generator-core.min.js"></script>
         -->
-        <script src="https://unpkg.com/@mitchallen/maze-generator-core@0.1.3/dist/maze-generator-core.min.js"></script>
-        <script src="https://unpkg.com/@mitchallen/connection-grid-square@0.1.0/dist/connection-grid-square.min.js"></script>
+        <script src="https://unpkg.com/@mitchallen/maze-generator-core@0.1.7/dist/maze-generator-core.min.js"></script>
+        <script src="https://unpkg.com/@mitchallen/connection-grid-square@0.1.9/dist/connection-grid-square.min.js"></script>
         <script>
           var cgFactory = window.MitchAllen.ConnectionGridSquare;
           console.log(cgFactory);
@@ -258,13 +258,15 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 #### Version 0.1.7
 
-* integrated travis-ci and codecov.io
-* changed license to MIT
-* updated test cases for 100% code coverage
+* updated dependencies
+* updated client example
 
 #### Version 0.1.6
 
 * changed __openBorder__ to __afterGenerate__ to make it more generic
+* integrated travis-ci and codecov.io
+* changed license to MIT
+* updated test cases for 100% code coverage
 
 #### Version 0.1.5
 
