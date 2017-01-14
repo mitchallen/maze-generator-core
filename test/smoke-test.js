@@ -12,7 +12,8 @@
 var request = require('supertest'),
     should = require('should'),
     cgFactory = require("@mitchallen/connection-grid-square"),
-    modulePath = "../dist/maze-generator-core";
+    // modulePath = "../dist/maze-generator-core";
+    modulePath = "../modules/index";
 
 describe('module create', function() {
 
@@ -176,6 +177,19 @@ describe('module create', function() {
                 { c: 1, r: 0 },
                 { c: 1, r: 1 },
             ]
+        };
+        maze.generate(spec);
+        done();
+    });
+
+    it('generate start with a negative c value should fail gracefully', function(done) {
+        var _connectionGrid = cgFactory.create({ x: 10, y: 5 });
+        should.exist(_connectionGrid);
+        var maze = _module.create( {
+            grid: _connectionGrid,
+        });
+        let spec = {
+            start: { c: -3, r: 3 }
         };
         maze.generate(spec);
         done();

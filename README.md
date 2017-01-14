@@ -256,6 +256,12 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Version History
 
+#### Version 0.1.7
+
+* integrated travis-ci and codecov.io
+* changed license to MIT
+* updated test cases for 100% code coverage
+
 #### Version 0.1.6
 
 * changed __openBorder__ to __afterGenerate__ to make it more generic
