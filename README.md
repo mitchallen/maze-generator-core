@@ -3,6 +3,27 @@
 ==
 maze generator core
 --
+
+<p align="left">
+
+  <a href="https://travis-ci.org/mitchallen/maze-generator-core">
+    <img src="https://img.shields.io/travis/mitchallen/maze-generator-core.svg?style=flat-square" alt="Version">
+  </a>
+  
+  <a href="https://codecov.io/gh/mitchallen/maze-generator-core">
+    <img src="https://codecov.io/gh/mitchallen/maze-generator-core/branch/master/graph/badge.svg" alt="Coverage Status">
+  </a>
+  
+  <a href="https://npmjs.org/package/@mitchallen/maze-generator-core">
+    <img src="http://img.shields.io/npm/v/@mitchallen/maze-generator-core.svg?style=flat-square" alt="Version">
+  </a>
+  
+  <a href="https://npmjs.org/package/@mitchallen/maze-generator-core">
+    <img src="https://img.shields.io/github/license/mitchallen/maze-generator-core.svg">
+  </a>
+  
+</p>
+
 * * *
 ## Installation
 
