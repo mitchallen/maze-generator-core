@@ -1,17 +1,16 @@
 {
   "name": "@mitchallen/maze-generator-core",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "maze generator core",
   "main": "dist/maze-generator-core.js",
   "scripts": {
-    "//": "To use: npm run test-nodemon (assumes global location of mocha)",
+    "//": "Usage:> [PORT=8002] npm run web-server",
     "start": "node dist/maze-generator-core.js",
     "test": "grunt && mocha --recursive --timeout 20000",
     "test-coverage": "./node_modules/.bin/istanbul cover _mocha -- -R spec test/**/*",
     "test-nodemon": "nodemon /usr/local/bin/mocha --recursive --timeout 5000",
     "test-debug": "grunt && mocha -g '@DEBUG' --recursive --timeout 20000",
     "test-jenkins": "grunt && mocha --recursive --timeout 20000 -R xunit test/ > test-reports.xml",
-    "//": "Usage:> [PORT=8002] npm run web-server",
     "web-server": "python -m SimpleHTTPServer $PORT || 8000"
   },
   "repository": {
@@ -22,7 +21,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@mitchallen/connection-grid-square": "^0.1.9",
+    "@mitchallen/connection-grid-square": "^0.1.10",
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
     "browserify-derequire": "^0.9.4",
