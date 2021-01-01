@@ -33,7 +33,7 @@
  * @param {grid} options.grid Grid based on {@link external:@mitchallen/connection-grid-core|@mitchallen/connection-grid-core}
  * @returns {module:maze-generator-core}
  * @example <caption>Creating a maze-generator-core</caption>
- * var cgFactory = require("@mitchallen/connection-grid-square"),
+ * let cgFactory = require("@mitchallen/connection-grid-square"),
  *     mazeCore = require("@mitchallen/maze-generator-core"),
  *     connectionGrid = cgFactory.create( { x: 5, y: 6 } );
  *     maze = mazeCore.create( {
@@ -43,7 +43,7 @@
 module.exports.create = (spec) => {
 
     spec = spec || {};
-    var _grid = spec.grid;
+    let _grid = spec.grid;
 
     if(!_grid) {
         return null;
@@ -61,9 +61,9 @@ module.exports.create = (spec) => {
 
             if(!this.isCell(x,y)) { return; }
             let dirs = this.getShuffledNeighborDirs( x, y );
-            for( var key in dirs ) {
-                var sDir = dirs[key];
-                var n = this.getNeighbor(x, y, sDir);
+            for( let key in dirs ) {
+                let sDir = dirs[key];
+                let n = this.getNeighbor(x, y, sDir);
                 if(n===null) {
                     continue;
                 }
@@ -147,8 +147,8 @@ module.exports.create = (spec) => {
 
             this.fill(0);
 
-            for( var mKey in aMask ) {
-                var mask = aMask[mKey];
+            for( let mKey in aMask ) {
+                let mask = aMask[mKey];
                 this.mask(mask.c,mask.r);
             }
 

@@ -34,7 +34,7 @@
 * @param {grid} options.grid Grid based on {@link external:@mitchallen/connection-grid-core|@mitchallen/connection-grid-core}
 * @returns {module:maze-generator-core}
 * @example <caption>Creating a maze-generator-core</caption>
-* var cgFactory = require("@mitchallen/connection-grid-square"),
+* let cgFactory = require("@mitchallen/connection-grid-square"),
 *     mazeCore = require("@mitchallen/maze-generator-core"),
 *     connectionGrid = cgFactory.create( { x: 5, y: 6 } );
 *     maze = mazeCore.create( {

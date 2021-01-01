@@ -114,7 +114,7 @@ It takes one spec parameter that must be an object with named parameters.
 
 **Example** *(Creating a maze-generator-core)*  
 ```js
-var cgFactory = require("@mitchallen/connection-grid-square"),
+let cgFactory = require("@mitchallen/connection-grid-square"),
     mazeCore = require("@mitchallen/maze-generator-core"),
     connectionGrid = cgFactory.create( { x: 5, y: 6 } );
     maze = mazeCore.create( {

@@ -74,7 +74,7 @@ maze.generate();
         <meta charset="utf-8">
         <title>Maze Generator Core Example</title>
         <meta name="description" content="Maze Generator Core Example">
-        <script src="https://unpkg.com/@mitchallen/maze-generator-core@0.1.8/dist/maze-generator-core.min.js"></script>
+        <script src="https://unpkg.com/@mitchallen/maze-generator-core@0.1.9/dist/maze-generator-core.min.js"></script>
         <script src="https://unpkg.com/@mitchallen/connection-grid-square@0.1.9/dist/connection-grid-square.min.js"></script>
         <script>
           var cgFactory = window.MitchAllen.ConnectionGridSquare;
