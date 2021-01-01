@@ -13,7 +13,7 @@ var request = require('supertest'),
     should = require('should'),
     cgFactory = require("@mitchallen/connection-grid-square"),
     // modulePath = "../dist/maze-generator-core";
-    modulePath = "../modules/index";
+    modulePath = "../src/index";
 
 describe('module create', function() {
 
