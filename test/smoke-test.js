@@ -274,7 +274,7 @@ describe('module create', function () {
     done();
   });
 
-  it('solve 4 x 5 maze method should generate a maze', function (done) {
+  it('solve maze method should solve maze', function (done) {
     let _size = { x: 25, y: 25 };
     let _connectionGrid = cgFactory.create(_size);
     should.exist(_connectionGrid);
