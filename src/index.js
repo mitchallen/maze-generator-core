@@ -125,10 +125,14 @@ module.exports.create = (spec) => {
     },
 
     // leave undocumented for now
-    carveMaze: function (x, y, depth, maxDepth) {
+    carveMaze: function (x, y, depth, maxDepth, depthFunction ) {
 
-      if (depth >= maxDepth) {
-        console.warn("MAXIMUM DEPTH REACHED: %d", maxDepth);
+      // if (depth >= maxDepth) {
+      //   console.warn("MAXIMUM DEPTH REACHED: %d", maxDepth);
+      //   return;
+      // }
+
+      if( depthFunction( depth, maxDepth ) ) {
         return;
       }
 
@@ -150,7 +154,7 @@ module.exports.create = (spec) => {
         ) {
           // Connect cell to neighbor
           this.connectUndirected(x, y, sDir);
-          this.carveMaze(n.x, n.y, depth + 1, maxDepth);
+          this.carveMaze(n.x, n.y, depth + 1, maxDepth, depthFunction);
         }
       }
     },
@@ -218,6 +222,8 @@ module.exports.create = (spec) => {
         x = start.c || 0,
         y = start.r || 0;
 
+      let depthFunction = spec.depthFunction || (( depth, maxDepth ) => { depth >= maxDepth });
+  
       this.fill(0);
 
       for (let mKey in aMask) {
@@ -227,7 +233,7 @@ module.exports.create = (spec) => {
 
       let maxDepth = this.xSize * this.ySize;
 
-      this.carveMaze(x, y, 0, maxDepth);
+      this.carveMaze(x, y, 0, maxDepth, depthFunction);
 
       // derived class can parse extra spec parameters
 

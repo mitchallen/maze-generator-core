@@ -307,4 +307,25 @@ describe('module create', function () {
     printboard({ maze, x: _size.x, y: _size.y });
     done();
   });
+
+  it('alt method should control depth', function (done) {
+    let _size = { x: 25, y: 25 };
+    let _connectionGrid = cgFactory.create(_size);
+    should.exist(_connectionGrid);
+    var maze = _module.create({
+      grid: _connectionGrid,
+    });
+    should.exist(maze);
+    let options = {
+      start: { c: 0, r: 0 },
+      depthFunction: function (depth, maxDepth) { 
+        return depth > 13 || depth >= maxDepth; 
+      }
+    }
+    maze.generate(options);
+
+    printboard({ maze, x: _size.x, y: _size.y });
+
+    done();
+  });
 });

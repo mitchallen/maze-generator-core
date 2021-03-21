@@ -19,7 +19,6 @@
   },
   "author": "Mitch Allen <npm@mitchallen.com> (http://mitchallen.com)",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@mitchallen/connection-grid-square": "^0.1.17",
     "babel-preset-es2015": "^6.18.0",
