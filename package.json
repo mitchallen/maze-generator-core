@@ -36,5 +36,8 @@
     "mocha": "^10.1.0",
     "should": "^10.0.0",
     "supertest": "^7.2.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
