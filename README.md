@@ -129,6 +129,14 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Version History
 
+#### Version 0.1.13
+
+* replaced the legacy grunt/browserify/babel build with [esbuild](https://esbuild.github.io/)
+* migrated CI from Travis to GitHub Actions
+* modernized dependencies and resolved all `npm audit` / Dependabot alerts
+* removed unused `supertest` dependency and stopped tracking `node_modules` in git
+* upgraded `should` and `esbuild` to current releases
+
 #### Version 0.1.7
 
 * updated dependencies

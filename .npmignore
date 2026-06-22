@@ -1,8 +1,10 @@
-Gruntfile.js
-test
+node_modules
 coverage
 example
 examples
 support
+test
+.github
+.vscode
 .gitignore
-.travis.yml
+build.js

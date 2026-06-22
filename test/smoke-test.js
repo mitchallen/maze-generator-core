@@ -9,8 +9,7 @@
 
 "use strict";
 
-var request = require('supertest'),
-  should = require('should'),
+var should = require('should'),
   cgFactory = require("@mitchallen/connection-grid-square"),
   modulePath = "../dist/maze-generator-core";
 // modulePath = "../src/index";
