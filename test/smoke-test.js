@@ -307,6 +307,38 @@ describe('module create', function () {
     done();
   });
 
+  it('solve with empty points should return without error', function (done) {
+    let _connectionGrid = cgFactory.create({ x: 5, y: 5 });
+    var maze = _module.create({ grid: _connectionGrid });
+    maze.generate();
+    maze.solve([]);
+    done();
+  });
+
+  it('solveNode at or beyond max depth should stop', function (done) {
+    let _connectionGrid = cgFactory.create({ x: 5, y: 5 });
+    var maze = _module.create({ grid: _connectionGrid });
+    maze.generate();
+    let origWarn = console.warn;
+    console.warn = function () {};
+    maze.solveNode(0, 0, 5, 1);
+    console.warn = origWarn;
+    done();
+  });
+
+  it('solveNode should skip a red neighbor', function (done) {
+    let _connectionGrid = cgFactory.create({ x: 5, y: 5 });
+    var maze = _module.create({ grid: _connectionGrid });
+    maze.generate();
+    maze.clearAllVisited();
+    maze.connectUndirected(0, 0, "E");
+    maze.markGreen(0, 0);
+    maze.markRed(1, 0);
+    maze.solveNode(0, 0, 0, maze.xSize * maze.ySize);
+    should.equal(maze.isRed(1, 0), true);
+    done();
+  });
+
   it('alt method should control depth', function (done) {
     let _size = { x: 25, y: 25 };
     let _connectionGrid = cgFactory.create(_size);
