@@ -11,8 +11,8 @@
 
 var should = require('should'),
   cgFactory = require("@mitchallen/connection-grid-square"),
-  modulePath = "../dist/maze-generator-core";
-// modulePath = "../src/index";
+  modulePath = "../src/index";
+// modulePath = "../dist/maze-generator-core";
 
 function printboard(spec = {}) {
 
