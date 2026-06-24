@@ -27,10 +27,27 @@ maze generator core
 * * *
 ## Installation
 
-You must use __npm__ __2.7.0__ or higher because of the scoped package name.
+This package is published to the **GitHub Packages** registry, not npmjs.
+GitHub Packages requires authentication for every install, even though the
+package is public, so you need a GitHub personal access token with the
+`read:packages` scope.
 
-    $ npm init
-    $ npm install @mitchallen/maze-generator-core --save
+1. Export your token:
+
+       export NODE_AUTH_TOKEN=ghp_your_token_here
+
+2. Add an `.npmrc` to your project so the `@mitchallen` scope resolves from
+   GitHub Packages:
+
+       @mitchallen:registry=https://npm.pkg.github.com
+       //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+
+3. Install:
+
+       $ npm install @mitchallen/maze-generator-core --save
+
+> Tip: with the GitHub CLI, `export NODE_AUTH_TOKEN="$(gh auth token)"`
+> (after `gh auth refresh --scopes read:packages`).
   
 * * *
 
