@@ -3,6 +3,9 @@
   "version": "0.1.15",
   "description": "maze generator core",
   "main": "dist/maze-generator-core.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node build.js",
     "test": "npm run build && mocha --recursive --timeout 20000",
