@@ -1,8 +1,11 @@
-> **This repository is archived.** `@mitchallen/maze-generator-core` is now developed and
-> published from the [maze-generator-v2](https://github.com/mitchallen/maze-generator-v2)
-> monorepo, in [`packages/maze-generator-core`](https://github.com/mitchallen/maze-generator-v2/tree/main/packages/maze-generator-core).
-> The package name and install instructions are unchanged; new versions come
-> from there.
+> **This repository is archived, and `@mitchallen/maze-generator-core` is frozen at 0.1.19.**
+> That version stays installable from GitHub Packages for existing users, but
+> there will be no further releases. The code continues as
+> `@mitchallen/maze-generator-core-v2`, an internal package of the
+> [maze-generator-v2](https://github.com/mitchallen/maze-generator-v2) monorepo
+> ([`packages/maze-generator-core`](https://github.com/mitchallen/maze-generator-v2/tree/main/packages/maze-generator-core)),
+> bundled into `@mitchallen/maze-generator-v2`. Version 0.1.19 was published from
+> that repo at tag `v0.3.7`.
 
 
 @mitchallen/maze-generator-core
