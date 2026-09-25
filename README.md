@@ -10,8 +10,8 @@ maze generator core
     <img src="https://github.com/mitchallen/maze-generator-core/actions/workflows/ci.yml/badge.svg" alt="Build Status">
   </a>
   
-  <a href="https://codecov.io/gh/mitchallen/maze-generator-core">
-    <img src="https://codecov.io/gh/mitchallen/maze-generator-core/branch/main/graph/badge.svg" alt="Coverage Status">
+  <a href="https://github.com/mitchallen/maze-generator-core/actions/workflows/ci.yml?query=branch%3Amain">
+    <img src="https://img.shields.io/badge/coverage-100%25-brightgreen" alt="Coverage: 100%">
   </a>
   
   <a href="https://github.com/mitchallen/maze-generator-core/pkgs/npm/maze-generator-core">
@@ -28,6 +28,7 @@ maze generator core
 ## Installation
 
 This package is published to the **GitHub Packages** registry, not npmjs.
+Versions **0.1.13** and earlier remain on npmjs.org and are no longer updated there.
 GitHub Packages requires authentication for every install, even though the
 package is public, so you need a GitHub personal access token with the
 `read:packages` scope.
