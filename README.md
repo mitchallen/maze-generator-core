@@ -11,14 +11,14 @@ maze generator core
   </a>
   
   <a href="https://codecov.io/gh/mitchallen/maze-generator-core">
-    <img src="https://codecov.io/gh/mitchallen/maze-generator-core/branch/master/graph/badge.svg" alt="Coverage Status">
+    <img src="https://codecov.io/gh/mitchallen/maze-generator-core/branch/main/graph/badge.svg" alt="Coverage Status">
   </a>
   
   <a href="https://github.com/mitchallen/maze-generator-core/pkgs/npm/maze-generator-core">
     <img src="https://img.shields.io/github/v/tag/mitchallen/maze-generator-core.svg?label=version" alt="Version">
   </a>
   
-  <a href="https://github.com/mitchallen/maze-generator-core/blob/master/LICENSE">
+  <a href="https://github.com/mitchallen/maze-generator-core/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/mitchallen/maze-generator-core.svg">
   </a>
   
